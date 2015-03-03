@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Expo INA</title>
+
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<script src="cordova.js"></script>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+<script src="js/main.js"></script>
+<script src="js/handlebars-v1.3.0.js"></script>
+
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCZ_GBLKZqAY-yzB6bvFbzEhgici161mtU&sensor=false"> </script> 
+
+<script type="application/javascript" src="js/iscroll.js"></script>
+
+<!-- Core CSS file -->
+<link rel="stylesheet" href="js/photoswipe/photoswipe.css"> 
+
+<!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+     In the folder of skin CSS file there are also:
+     - .png and .svg icons sprite, 
+     - preloader.gif (for browsers that do not support CSS animations) -->
+<link rel="stylesheet" href="js/photoswipe/default-skin/default-skin.css"> 
+
+<!-- Core JS file -->
+<script src="js/photoswipe/photoswipe.min.js"></script> 
+
+<!-- UI JS file -->
+<script src="js/photoswipe/photoswipe-ui-default.min.js"></script> 
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=yes" />
+<meta charset="UTF-8">
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+
+
+</head>
+<body>
+
+
+<div data-role="page" id="home" class="blueContent">
+	<header class="header" data-role="header">
+		<h1></h1>
+		<a href="#panel-01" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+	</header>
+
+
+	 <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-01"> 
+     </div>
+
+	<!-- Content -->
+    <div data-role="content" id="contentMain">
+        <img src="img/grecabaja.png" class="grecabaja">
+        <div  class="logoCentral"><img style="width: 350px;" src="img/expoina.png">
+                <p> Del 15 al 17 de Abril de 2015</p>
+                <p> Centro Banamex, Ciudad de México, México.
+        </div>
+    </div>
+    </div> <!--  page -->
+
+
+
+<div data-role="page"  id="menuVisitante" class="whiteContent">
+     <header class="header" data-role="header" data-position="fixed">
+        <a href="#home"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco" ></i>
+        </a>
+        <a href="#panel-03" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Visitante</div>
+    </header>
+    <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-03"> 
+    </div>
+
+      <div data-role="content" class="seccContent"  >
+        <ul data-role="listview"  id="listaLecturas" >
+            <li><a href="#prereg" data-transition="slide">Pre-Registro</a></li>
+            <li><a href="#reserva" data-transition="slide">Reserva en línea</a></li>
+            <li><a href="#ubicacion" data-transition="slide">Ubicación</a></li>
+            <li><a href="#adiestramiento" data-transition="slide">Programa de Adiestramiento Automotriz</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- MENU EXPOSITOR -->
+<div data-role="page"  id="menuExpositor" class="whiteContent">
+     <header class="header" data-role="header" data-position="fixed">
+         <a href="#home"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco" ></i>
+        </a>
+        <a href="#panel-04" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Expositor</div>
+    </header>
+    <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-04"> 
+    </div>
+
+      <div data-role="content" class="seccContent"  >
+        <ul data-role="listview"  id="listaLecturas" >
+            <li><a href="#" onclick="window.open('assets/ei15_plano_web.pdf', 'blank', 'location=yes');" data-transition="slide">Plano del Salón</a></li>
+            <li><a href="#expLista" data-transition="slide">Lista de expositores</a></li>
+            <li><a href="#expContrato" data-transition="slide">Contrato de inscripción</a></li>
+            <li><a href="#expAcceso" data-transition="slide">Acceso a expositores</a></li>
+            <li><a href="#expReserve" data-transition="slide">Reserve hotel en línea</a></li>
+            <li><a href="#expUbicacion" data-transition="slide">Ubicación</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- MENU EXPOSITOR -->
+<div data-role="page"  id="menuPrensa" class="whiteContent">
+     <header class="header" data-role="header" data-position="fixed">
+       <a href="#home"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco" ></i>
+        </a>
+        <a href="#panel-05" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Prensa</div>
+    </header>
+    <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-05"> 
+    </div>
+
+      <div data-role="content" class="seccContent"  >
+        <ul data-role="listview"  id="listaLecturas" >
+            <li><a href="#prensaAcreditaciones" data-transition="slide">Acreditaciones</a></li>
+            <li><a href="#prensaBoletines" data-transition="slide">Boletines</a></li>
+            <li><a href="#prensaFicha" data-transition="slide">Ficha Técnica</a></li>
+            <li><a href="#prensaPrograma" data-transition="slide">Programa de Actividades</a></li>
+            <li><a href="#prensaReserve" data-transition="slide">Reserve Hotel en línea</a></li>
+            <li><a href="#prensaUbicacion" data-transition="slide">Ubicación</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- MENU EXPOSITOR -->
+<div data-role="page"  id="menuMedia" class="whiteContent">
+     <header class="header" data-role="header" data-position="fixed">
+         <a href="#home"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-06" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Galería</div>
+    </header>
+    <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-06"> 
+    </div>
+
+      <div data-role="content" class="seccContent"  >
+        <ul data-role="listview"  id="listaLecturas" >
+            <li><a href="#mediaFotos" data-transition="slide">Fotos</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- **************************   PAGES **************************************** -->
+
+<!-- INFO PAGE -->
+
+<div data-role="page" id="info" class="whiteContent">
+    <header class="header" data-role="header" data-position="fixed">
+        <a href="#home"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-02" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Información General</div>
+    </header>
+
+     <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-02"> 
+     </div>
+    <div data-role="content" class="seccContent">
+
+    <div class="infoPill">
+        <div class="pillTitle degradado">
+            <div class="pillText"> ¿Qué encontrará en ExpoINA 2015? </div>
+        </div>
+         <div class="rightList">
+            <ul class="listContent">
+                <li >Autopartes y repuestos.</li>
+                <li >Servicio técnico.</li>
+                <li >Capacitación especializada.</li>
+                <li >Equipos.</li>
+                <li >Herramientas.</li>
+                <li >Insumos.</li>
+                <li >Alta tecnología.</li>
+                <li >Compradores potenciales y especializados.</li>
+                <li >Servicios generales y más.</li>
+            </ul>
+         </div>
+       
+     </div>
+
+     <div class="infoPill">
+        <div class="pillTitle degradado">
+            <div class="pillText">Conferencias</div>
+        </div>
+         <div class="rightList">
+            <div class="listContent">
+           Durante la exposición, ExpoINA se distingue por presentar un verdadero Programa de Adiestramiento Automotriz (PAA), llevando así a un nivel académico esta importante sección de conferencias.
+           </div>
+         </div>
+       
+     </div>
+
+     <div class="infoPill">
+        <div class="pillTitle degradado">
+            <div class="pillText">Pabellón del Mecánico</div>
+        </div>
+         <div class="rightList">
+              <div class="listContent">
+              ExpoINA integra su pabellón del mecánico único en las exposiciones en México. Con este complemento el asistente puede poner en práctica de inmediato la teoría recibida en las conferencias.
+              </div>
+         </div>
+         
+     </div>
+    </div>
+
+    <footer data-role="footer" data-position="fixed">
+         <div class="footerExpositores">
+             <img class="imgExpositores" src="img/150108 expoina cintillo.png">
+         </div>
+
+    </footer>
+
+</div> <!--  page -->
+
+
+
+<!-- PREREGISTRO -->
+<div data-role="page" id="prereg" class="whiteContent">
+    <header class="header" data-role="header" data-position="fixed">
+        <a href="#menuVisitante"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-07" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Pre-Registro</div>
+    </header>
+     <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-07"> 
+     </div>
+    <div data-role="content" class="seccContent">
+    <div class="infoPill">
+        <div class="">
+        <a class="actionA" href="#" onclick="window.open('http://registro.ina.ahmreg.com/iniciar.php?leng=es_mx', '_blank', 'location=yes');">
+            <div class="actionButton degradado"> REGÍSTRATE AQUÍ </div>
+            </a>
+        </div> 
+    </div>
+    <footer data-role="footer" data-position="fixed">
+         <div class="footerExpositores">
+             <img class="imgExpositores" src="img/150108 expoina cintillo.png">
+         </div>
+    </footer>
+   </div> 
+</div> <!--  page -->
+
+
+<!-- RESERVA  -->
+<div data-role="page" id="reserva" class="whiteContent">
+    <header class="header" data-role="header" data-position="fixed">
+         <a href="#menuVisitante"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-08" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Reserva en línea</div>
+    </header>
+     <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-08"> 
+     </div>
+    <div data-role="content" class="seccContent">
+    <div class="infoPill">
+        <div class="">
+        <a class="actionA" href="#" onclick="window.open('http://www.reservesuhabitacion.com/GRUPOS_gci/PantallaPrincipalFrontEnd.php?var1=1.1&OpcionDirecta=Si&IdGrupos=300', '_blank', 'location=yes');">
+            <div class="actionButton degradado"> RESERVA AQUÍ </div>
+            </a>
+        </div> 
+    </div>
+    <footer data-role="footer" data-position="fixed">
+         <div class="footerExpositores">
+             <img class="imgExpositores" src="img/150108 expoina cintillo.png">
+         </div>
+    </footer>
+    </div>
+
+</div> <!--  page -->
+
+
+<!-- UBICACION  -->
+<div data-role="page" id="ubicacion" class="whiteContent">
+    <header class="header" data-role="header" data-position="fixed">
+       <a href="#menuVisitante"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-09" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Ubicación</div>
+    </header>
+     <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-09"> 
+     </div>
+    <div data-role="content" class="seccContent">
+    <div class="infoPill">
+        <div class="">
+            <p>Centro Banamex</p>
+            
+        </div>
+
+    </div>
+
+    <div id="geolocation" style="height:500px;width:100%;height:100%;"></div> 
+
+    <footer data-role="footer" data-position="fixed">
+         <div class="footerExpositores">
+             <img class="imgExpositores" src="img/150108 expoina cintillo.png">
+         </div>
+    </footer>
+    </div>
+</div> <!--  page -->
+
+<!-- PRENSA PROGRAMA  -->
+<div data-role="page" id="adiestramiento" class="whiteContent">
+    <header class="header" data-role="header" data-position="fixed">
+        <a href="#menuVisitante"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-19" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Adiestramiento Automotriz</div>
+    </header>
+     <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-19"> 
+     </div>
+    <div data-role="content" class="seccContent">
+    <div class="infoPill">
+        <div class="">
+              <table id="programaLista">
+                <tr><td class="dayHead">MIÉRCOLES 15 de ABRIL</td> <td></td></tr>
+                <tr><td>ESTRATEGIAS DE DIAGNOSTICO DE FALLAS<div class="subText">Auditorio 1</div></td> <td class="horariosLista" valign="top">13:00 - 14:00</td></tr>
+                <tr><td>TRANSEJE ELECTRÓNICO (diagnostico)<div class="subText">Auditorio 2</div></td> <td class="horariosLista" valign="top">15:00 - 16:00</td></tr>
+                <tr><td>ACELERACIÓN ELECTRÓNICA MULTIMARCA<div class="subText">Auditorio 1</div></td> <td valign="top" class="horariosLista">17:00 - 18:00</td></tr>
+                <tr><td>INMOVILIZADORES (operación y diagnóstico)<div class="subText">Auditorio 2</div></td> <td valign="top" class="horariosLista">19:00 - 20:00</td></tr>
+
+                <tr><td class="dayHead">JUEVES 16 de ABRIL</td> <td></td></tr>
+                <tr><td>SISTEMAS DE BOLSA DE AIRE<div class="subText">Auditorio 1</div></td> <td class="horariosLista" valign="top">13:00 - 14:00</td></tr>
+                <tr><td>DIAGNÓSTICO AUTOMOTRIZ AVANZADO<div class="subText">Auditorio 2</div></td> <td class="horariosLista" valign="top">15:00 - 16:00</td></tr>
+                <tr><td>TRANSMISIÓN AUTOMÁTICA CVT<div class="subText">Auditorio 1</div></td> <td valign="top" class="horariosLista">17:00 - 18:00</td></tr>
+                <tr><td>DIRECCIÓN ELECTRÓNICA ASISTIDA<div class="subText">Auditorio 2</div></td> <td valign="top" class="horariosLista">19:00 - 20:00</td></tr>
+
+                <tr><td class="dayHead">VIERNES 17 de ABRIL</td> <td></td></tr>
+                <tr><td>5 PASOS PARA REALIZAR DIAGNÓSTICO CON SCANER<div class="subText">Auditorio 1</div></td> <td class="horariosLista" valign="top">13:00 - 20:00</td></tr>
+                <tr><td>TRANSEJE AUTOMÁTICO<div class="subText">Auditorio 2</div></td> <td class="horariosLista" valign="top">13:00 - 14:00</td></tr>
+                <tr><td>PRUEBAS AVANZADAS AL SISTEMA DE INYECCIÓN CON OSCILOSCOPIO<div class="subText">Auditorio 1</div> </td> <td class="horariosLista" valign="top">15:00 - 16:00</td></tr>
+                <tr><td>PROGRAMACIÓN DE LLAVES<div class="subText">Auditorio 2</div></td> <td valign="top" class="horariosLista">19:00 - 20:00</td></tr>
+                
+
+            </table>
+        </div> 
+    </div>
+    <footer data-role="footer" data-position="fixed">
+         <div class="footerExpositores">
+             <img class="imgExpositores" src="img/150108 expoina cintillo.png">
+         </div>
+    </footer>
+    </div>
+</div> <!--  page -->
+
+
+<!-- PLANO DEL SALON  -->
+<div data-role="page" id="expPlano" class="whiteContent">
+    <header class="header" data-role="header" data-position="fixed">
+       <a href="#menuExpositor"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-10" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Plano del salón</div>
+    </header>
+     <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-10"> 
+     </div>
+    <div data-role="content" class="seccContent">
+
+        <div class="infoPill">
+        <div class="">
+        <a class="actionA" href="#" onclick="window.open('assets/ei15_plano_web.pdf', '_system', 'location=yes');">
+            <div class="actionButton degradado"> PLANO SA </div>
+            </a>
+        </div> 
+   
+
+    </div>
+    <footer data-role="footer" data-position="fixed">
+         <div class="footerExpositores">
+             
+             <img class="imgExpositores" src="img/150108 expoina cintillo.png">
+         </div>
+    </footer>
+    </div>
+</div> <!--  page -->
+
+
+<!-- LISTA  -->
+<div data-role="page" id="expLista" class="whiteContent">
+    <header class="header" data-role="header" data-position="fixed">
+       <a href="#menuExpositor"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-11" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Lista de Expositores</div>
+    </header>
+     <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-11"> 
+     </div>
+    <div data-role="content" class="seccContent">
+    <div class="infoPill">
+        <div class="">
+            <table id="expositoresLista">
+                <thead>
+                <tr>
+                    <td><h3>Estand</h3></td>
+                    <td><h3>Empresa</h3></td>
+                </tr>
+                </thead>
+<TR><TD>0731</TD> <TD>AISIN</TD></TR>
+<TR><TD>0331</TD> <TD>ARCOMEX S.A. DE C.V.</TD></TR>
+<TR><TD>0331</TD> <TD>ARNESES ELÉCTRICOS AUTOMOTRICES S.A. DE C.V.</TD></TR>
+<TR><TD>0219</TD> <TD>ARTLUX</TD></TR>
+<TR><TD>0336</TD> <TD>BIRLOS AUTOMOTRICES HERCULES S.A. DE C.V.</TD></TR>
+<TR><TD>0937</TD> <TD>CAMPEONATO TOYOTA ELECTRATÓN LTH</TD></TR>
+<TR><TD>0300</TD> <TD>CARDONE DE MÉXICO</TD></TR>
+<TR><TD>0200</TD> <TD>CARL ZEISS</TD></TR>
+<TR><TD>0331</TD> <TD>CONDUMEX AUTOPARTES</TD></TR>
+<TR><TD>0331</TD> <TD>CORDAFLEX S.A DE C.V.</TD></TR>
+<TR><TD>0431</TD> <TD>CRUMEX</TD></TR>
+<TR><TD>0305</TD> <TD>DACOMSA</TD></TR>
+<TR><TD>0719</TD> <TD>DENSO</TD></TR>
+<TR><TD>0301</TD> <TD>DORMAN PRODUCTS, INC.</TD></TR>
+<TR><TD>0332</TD> <TD>DQS UL DE MÉXICO</TD></TR>
+<TR><TD>0837</TD> <TD>EMBAJADA DE LA REPÚBLICA ARGENTINA</TD></TR>
+<TR><TD>0230</TD> <TD>EPICOR SOFTWARE</TD></TR>
+<TR><TD>0218</TD> <TD>EXIDE TECHNOLOGIES</TD></TR>
+<TR><TD>0405</TD> <TD>FEDERAL MOGUL MOTORPARTS</TD></TR>
+<TR><TD>0331</TD> <TD>GABRIEL DE MÉXICO S.A. DE C.V.</TD></TR>
+<TR><TD>0715</TD> <TD>GATES DE MÉXICO</TD></TR>
+<TR><TD>0737</TD> <TD>GONHER AUTOPARTES</TD></TR>
+<TR><TD>0205</TD> <TD>GOOD YEAR</TD></TR>
+<TR><TD>0110</TD> <TD>GRC AUTOPARTES</TD></TR>
+<TR><TD>0743</TD> <TD>GRUPO CEDVA</TD></TR>
+<TR><TD>0301</TD> <TD>GRUPO CONTUSA</TD></TR>
+<TR><TD>0232</TD> <TD>GRUPO LOGISTICS</TD></TR>
+<TR><TD>0805</TD> <TD>HERKO AUTOMOTIVE GROUP</TD></TR>
+<TR><TD>0525</TD> <TD>HITACHI AUTOMOTIVE SYSTEMS AMERICAS, INC.</TD></TR>
+<TR><TD>0625</TD> <TD>INTERFIL, S.A. DE C.V.</TD></TR>
+<TR><TD>0519</TD> <TD>JOHNSON CONTROLS</TD></TR>
+<TR><TD>0105</TD> <TD>KEM DE MEXICO, TOMCO DE MEXICO</TD></TR>
+<TR><TD>0425</TD> <TD>KYB</TD></TR>
+<TR><TD>0424</TD> <TD>LUCAS OIL PRODUCTS INC.</TD></TR>
+<TR><TD>0318</TD> <TD>MANUFACTURAS DIVERSAS S.A. DE C.V.</TD></TR>
+<TR><TD>0231</TD> <TD>MEXICO AUTOMOTIVE REVIEW</TD></TR>
+<TR><TD>0231</TD> <TD>MONROE MEXICO</TD></TR>
+<TR><TD>0231</TD> <TD>NORTH AMERICAN CLUTCH DE MEXICO, SA DE CV</TD></TR>
+<TR><TD>0231</TD> <TD>NSK</TD></TR>
+<TR><TD>0231</TD> <TD>OMRON MÉXICO</TD></TR>
+<TR><TD>0231</TD> <TD>REVISTA MEXICO INDUSTRY</TD></TR>
+<TR><TD>0231</TD> <TD>SANLUIS RASSINI</TD></TR>
+<TR><TD>0231</TD> <TD>SIMEPA - JUNTAS FRACO</TD></TR>
+<TR><TD>0231</TD> <TD>SKF DE MEXICO, S.A. DE C.V.</TD></TR>
+<TR><TD>0231</TD> <TD>STANDAR MOTOR PRODUCTS, INC</TD></TR>
+<TR><TD>0231</TD> <TD>TIMKEN DE MEXICO</TD></TR>
+<TR><TD>0231</TD> <TD>UCI FRAM GROUP OPERATIONA S.A. DE C.V.</TD></TR>
+<TR><TD>0231</TD> <TD>URREA HERRAMIENTAS PROFESIONALES S.A. DE C.V.</TD></TR>
+<TR><TD>0231</TD> <TD>WALKER PRODUCTS, INC.</TD></TR>
+<TR><TD>0231</TD> <TD>ZF SERVICES S.A. DE C.V.</TD></TR>
+
+            </table>
+        </div> 
+    </div>
+    <footer data-role="footer" data-position="fixed">
+         <div class="footerExpositores">
+             <img class="imgExpositores" src="img/150108 expoina cintillo.png">
+         </div>
+    </footer>
+    </div>
+</div> <!--  page -->
+
+
+<!-- CONTRATO  -->
+<div data-role="page" id="expContrato" class="whiteContent">
+    <header class="header" data-role="header" data-position="fixed">
+        <a href="#menuExpositor"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-12" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Contrato</div>
+    </header>
+     <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-12"> 
+     </div>
+    <div data-role="content" class="seccContent">
+    <div class="infoPill">
+        <div class="">
+       <a class="actionA" href="#" onclick='PDFViewer.open("file://img/ei15-contrato-general.pdf","contrato.pdf")'>
+            <div class="actionButton degradado"> ABRIR CONTRATO (PDF) </div>
+            </a>
+        </div> 
+        </div> 
+    </div>
+    <footer data-role="footer" data-position="fixed">
+         <div class="footerExpositores">
+             <img class="imgExpositores" src="img/150108 expoina cintillo.png">
+         </div>
+    </footer>
+    </div>
+</div> <!--  page -->
+
+
+
+<!-- ACCESO  -->
+<div data-role="page" id="expAcceso" class="whiteContent">
+    <header class="header" data-role="header" data-position="fixed">
+         <a href="#menuExpositor"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-13" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Acceso</div>
+    </header>
+     <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-13"> 
+     </div>
+    <div data-role="content" class="seccContent">
+    <div class="infoPill">
+        <div class="">
+               <a class="actionA" href="#" onclick="window.open('http://bynexpo.com/App/expoina/expoina_2015/login.php', '_blank', 'location=yes');">
+            <div class="actionButton degradado">ACCESO REMOTO AQUÍ </div>
+            </a>
+        </div> 
+        </div> 
+    </div>
+    <footer data-role="footer" data-position="fixed">
+         <div class="footerExpositores">
+             <img class="imgExpositores" src="img/150108 expoina cintillo.png">
+         </div>
+    </footer>
+    </div>
+</div> <!--  page -->
+
+
+
+
+
+<!-- RESERVE  -->
+<div data-role="page" id="expReserve" class="whiteContent">
+    <header class="header" data-role="header" data-position="fixed">
+        <a href="#menuExpositor"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-14" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Reservar</div>
+    </header>
+     <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-14"> 
+     </div>
+    <div data-role="content" class="seccContent">
+    <div class="infoPill">
+        <div class="">
+                <a class="actionA" href="#" onclick="window.open('http://www.reservesuhabitacion.com/GRUPOS_gci/PantallaPrincipalFrontEnd.php?var1=1.1&OpcionDirecta=Si&IdGrupos=300', '_blank', 'location=yes');">
+            <div class="actionButton degradado"> RESERVA TU HOTEL AQUÍ </div>
+            </a>
+        </div> 
+    </div>
+    <footer data-role="footer" data-position="fixed">
+         <div class="footerExpositores">
+             <img class="imgExpositores" src="img/150108 expoina cintillo.png">
+         </div>
+    </footer>
+    </div>
+</div> <!--  page -->
+
+
+
+
+<!-- UBICACION  -->
+<div data-role="page" id="expUbicacion" class="whiteContent">
+    <header class="header" data-role="header" data-position="fixed">
+         <a href="#menuExpositor"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-15" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Ubicación</div>
+    </header>
+     <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-15"> 
+     </div>
+    <div data-role="content" class="seccContent">
+    <div class="infoPill">
+        <div class="">
+            <p>Centro Banamex</p>
+            
+        </div>
+
+    </div>
+
+    <div id="expMapa" style="height:500px;width:100%;height:100%;"></div> 
+
+    <footer data-role="footer" data-position="fixed">
+         <div class="footerExpositores">
+             <img class="imgExpositores" src="img/150108 expoina cintillo.png">
+         </div>
+    </footer>
+    </div>
+</div> <!--  page -->
+
+
+
+
+<!-- PRENSA ACREDITACIONES  -->
+<div data-role="page" id="prensaAcreditaciones" class="whiteContent">
+    <header class="header" data-role="header" data-position="fixed">
+       <a href="#menuPrensa"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-16" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Acreditación</div>
+    </header>
+     <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-16"> 
+     </div>
+    <div data-role="content" class="seccContent">
+    <div class="infoPill">
+        <div class="">
+            <img src="img/alvolantecontacto.jpg">
+        </div> 
+    </div>
+    <footer data-role="footer" data-position="fixed">
+         <div class="footerExpositores">
+             <img class="imgExpositores" src="img/150108 expoina cintillo.png">
+         </div>
+    </footer>
+    </div>
+</div> <!--  page -->
+
+
+
+<!-- PRENSA BOLETINEs  -->
+<div data-role="page" id="prensaBoletines" class="whiteContent">
+    <header class="header" data-role="header" data-position="fixed">
+       <a href="#menuPrensa"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-17" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Boletines</div>
+    </header>
+     <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-17"> 
+     </div>
+    <div data-role="content" class="seccContent">
+    <div class="infoPill">
+
+    <h1></h1>
+
+        <div class="">
+              <a class="actionA" href="#" onclick="window.open('assets/expoina-2015-comunicado-03.pdf', '_blank', 'location=yes');">
+            <div class="listadoPDF"><img class="icoPDF" src="img/pdf-u6565-fr.png">La capacitación de los mecánicos, actividad fundamental en ExpoINA 2015</div>
+            </a>
+
+              <a class="actionA" href="#" onclick="window.open('assets/140806_boletin_ExpoINA_01.pdf', '_blank', 'location=yes');">
+            <div class="listadoPDF"><img class="icoPDF" src="img/pdf-u6565-fr.png">Echan a andar maquinaria para ExpoINA 2015</div>
+            </a>
+
+              <a class="actionA" href="#" onclick="window.open('assets/expoina-2014-comunicado-01.pdf', '_blank', 'location=yes');">
+            <div class="listadoPDF"><img class="icoPDF" src="img/pdf-u6565-fr.png">Inaugurará la Secretaría de Economía la ExpoINA 2014 el 26 de marzo, 13 horas.</div>
+            </a>
+
+              <a class="actionA" href="#" onclick="window.open('assets/expoina-2014-comunicado-02.pdf', '_blank', 'location=yes');">
+            <div class="listadoPDF"><img class="icoPDF" src="img/pdf-u6565-fr.png">Anuncia Economía plan por $75 mdp de apoyo para la compra de automóviles.</div>
+            </a>
+
+              <a class="actionA" href="#" onclick="window.open('assets/expoina-2014-comunicado-03.pdf', '_blank', 'location=yes');">
+            <div class="listadoPDF"><img class="icoPDF" src="img/pdf-u6565-fr.png">Concurrido el Encuentro de Negocios en el segundo día de la ExpoINA 2014.</div>
+            </a>
+
+              <a class="actionA" href="#" onclick="window.open('assets/expoina-2014-comunicado-04.pdf', '_blank', 'location=yes');">
+            <div class="listadoPDF"><img class="icoPDF" src="img/pdf-u6565-fr.png">Llegaron los estudiantes al cierre de ExpoINA 2014</div>
+            </a>
+        </div> 
+    </div>
+    <footer data-role="footer" data-position="fixed">
+         <div class="footerExpositores">
+             <img class="imgExpositores" src="img/150108 expoina cintillo.png">
+         </div>
+    </footer>
+    </div>
+</div> <!--  page -->
+
+
+
+
+
+<!-- PRENSA FICHA  -->
+<div data-role="page" id="prensaFicha" class="whiteContent">
+    <header class="header" data-role="header" data-position="fixed">
+        <a href="#menuPrensa"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-18" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Ficha Técnica</div>
+    </header>
+     <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-18"> 
+     </div>
+    <div data-role="content" class="seccContent">
+    <div class="infoPill">
+        <div class="">
+            
+            <table id="ficha">
+              <tr>
+                <th></th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>Fecha:</td>
+                <td>del 15 al 17 de Abril del 2015</td>
+              </tr>
+              <tr>
+                <td>Lugar:</td>
+                <td>Centro Banamex, Ciudad de México.</td>
+              </tr>
+              <tr>
+                <td>Expositores:</td>
+                <td>Más de 90 Expositores</td>
+              </tr>
+              <tr>
+                <td>Visitantes:</td>
+                <td>Más de 11,000 Visitantes</td>
+              </tr>
+              <tr>
+                <td>Productos</td>
+                <td>Autopartes y repuestos: Centrado en llenar las necesidades del sector automotriz. Equipamiento: diagnóstico mecánico técnico, lubricación, limpieza, sistemas hidráulicos, montacargas, rampas.
+                Herramientas: vehículos de asistencia mecánica y eléctrica, mesas de trabajo, herramientas
+                manuales, herramientas neumáticas.
+                Consumibles: papel de lija, elementos de limpieza, pinturas, cintas, equipo de seguridad industrial, uniformes y equipo para porotection recursos humanos.
+                Servicio técnico: mecánica, carrocería y pintura tiendas, talleres de conversión de vehículos de gas natural, centros de servicio, concesionarios, centros de diagnóstico.
+                Servicios generales: Gruas, software, compañías de seguros, instituciones financieras y bancarias, seguridad, capacitación, consultoría administrativa para los talleres, publicaciones especializadas.
+                </td>
+              </tr>
+              <tr>
+                <td>Horario:</td>
+                <td>De las 13:00 a las 20:00 horas.</td>
+              </tr>
+              <tr>
+                <td>Este evento pertenece a:</td>
+                <td><p>Industria Nacional de Autopartes, A.C.</p>
+                   <p> Av. Colonia del Valle No. 607</p>
+                    <p>Col. del Valle,</p>
+                   <p> C.P. 03100, México, Dirstrito Federal, México</p>
+                    <p>Teléfono: +52(55)5682 5862</p>
+                   <p> Web: www.ina.mx</p></td>
+              </tr>
+              <tr>
+                <td>Organizado por</td>
+                <td><p>B&N</p>
+                   <p> B&N Exposiciones</p>
+                    <p>Herschel 152,</p>
+                    <p>Col. Anzures</p>
+                   <p> C.P. 11590, México, Distrito Federal, México</p>
+                    <p>Teléfono: +52(55)5254-1654</p>
+                    <p>Web: www.bynexpo.mx</p></td>
+              </tr>
+        </table>
+
+
+        </div> 
+    </div>
+    <footer data-role="footer" data-position="fixed">
+         <div class="footerExpositores">
+             <img class="imgExpositores" src="img/150108 expoina cintillo.png">
+         </div>
+    </footer>
+    </div>
+</div> <!--  page -->
+
+
+
+<!-- PRENSA PROGRAMA  -->
+<div data-role="page" id="prensaPrograma" class="whiteContent">
+    <header class="header" data-role="header" data-position="fixed">
+        <a href="#menuPrensa"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-19" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Programa de Actividades</div>
+    </header>
+     <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-19"> 
+     </div>
+    <div data-role="content" class="seccContent">
+    <div class="infoPill">
+        <div class="">
+              <table id="programaLista">
+                <thead>
+                <tr>
+                 
+                </tr>
+                </thead>
+                <tr><td class="dayHead">MIÉRCOLES 15 de MARZO</td> <td></td></tr>
+                <tr><td>INAGURACIÓN</td> <td class="horariosLista" valign="top">11:00 - 14:00</td></tr>
+                <tr><td>PROGRAMA DE ADIESTRAMIENTO AUTOMOTRIZ<div class="subText">Ubicación: Auditorios 1 y 2 al interior de la Sala C</div></td> <td class="horariosLista" valign="top">13:00 - 20:00</td></tr>
+                <tr><td>CONFERENCIAS DE EXPOSITORES<div class="subText">Ubicación: Palacio de la Canal 10 y 11</div></td> <td valign="top" class="horariosLista">13:00 - 20:00</td></tr>
+                <tr><td class="dayHead">JUEVES 16 de MARZO</td> <td></td></tr>
+                <tr><td>DESAYUNO Y VISITA VIP<div class="subText">Ubicación: Auditorios 1 y 2 al interior de la Sala C</div></td> <td class="horariosLista" valign="top">08:00 - 13:00</td></tr>
+                <tr><td>PROGRAMA DE ADIESTRAMIENTO AUTOMOTRIZ<div class="subText">Ubicación: Salas C y D Centro Banamex</div></td> <td class="horariosLista" valign="top">13:00 - 20:00</td></tr>
+                <tr><td>CONFERENCIAS DE EXPOSITORES<div class="subText">Ubicación: Palacio de la Canal 10 y 11</div></td> <td class="horariosLista" valign="top">13:00 - 20:00</td></tr>
+                <tr><td class="dayHead">VIERNES 17 de MARZO</td> <td></td></tr>
+                <tr><td>DÍA DEL ESTUDIANTE</td> <td class="horariosLista" valign="top">13:00 - 20:00</td></tr>
+                <tr><td>PROGRAMA DE ADIESTRAMIENTO AUTOMOTRIZ<div class="subText">Ubicación: Salas C y D Centro Banamex</div></td> <td class="horariosLista" valign="top">13:00 - 20:00</td></tr>
+                <tr><td>CLAUSURA</td> <td class="horariosLista" valign="top">20:00 Horas</td></tr>
+                
+
+            </table>
+        </div> 
+    </div>
+    <footer data-role="footer" data-position="fixed">
+         <div class="footerExpositores">
+             <img class="imgExpositores" src="img/150108 expoina cintillo.png">
+         </div>
+    </footer>
+    </div>
+</div> <!--  page -->
+
+
+
+<!-- PRENSA RESERVE  -->
+<div data-role="page" id="prensaReserve" class="whiteContent">
+    <header class="header" data-role="header" data-position="fixed">
+        <a href="#menuPrensa"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-20" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Reservar</div>
+    </header>
+     <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-20"> 
+     </div>
+    <div data-role="content" class="seccContent">
+    <div class="infoPill">
+        <div class="">
+                   <a class="actionA" href="#" onclick="window.open('http://www.reservesuhabitacion.com/GRUPOS_gci/PantallaPrincipalFrontEnd.php?var1=1.1&OpcionDirecta=Si&IdGrupos=300', '_blank', 'location=yes');">
+            <div class="actionButton degradado"> RESERVA TU HOTEL AQUÍ </div>
+            </a>
+        </div> 
+    </div>
+    <footer data-role="footer" data-position="fixed">
+         <div class="footerExpositores">
+             <img class="imgExpositores" src="img/150108 expoina cintillo.png">
+         </div>
+    </footer>
+    </div>
+</div> <!--  page -->
+
+
+<!-- PRENSA UBICACION  -->
+<div data-role="page" id="prensaUbicacion" class="whiteContent">
+    <header class="header" data-role="header" data-position="fixed">
+       <a href="#menuPrensa"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-21" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Ubicación</div>
+    </header>
+     <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-21"> 
+     </div>
+    <div data-role="content" class="seccContent">
+    <div class="infoPill">
+        <div class="">
+            <p>Centro Banamex</p>
+            
+        </div>
+
+    </div>
+
+    <div id="prensaMapa" style="height:500px;width:100%;height:100%;"></div> 
+    <footer data-role="footer" data-position="fixed">
+         <div class="footerExpositores">
+             <img class="imgExpositores" src="img/150108 expoina cintillo.png">
+         </div>
+    </footer>
+    </div>
+</div> <!--  page -->
+
+
+
+<!-- MEDIA FOTOS  -->
+<div data-role="page" id="mediaFotos" class="whiteContent">
+    <header class="header" data-role="header" data-position="fixed">
+        <a href="#home"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-22" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Fotos</div>
+    </header>
+     <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-22"> 
+     </div>
+    <div data-role="content" class="seccContent">
+   
+
+
+        <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+          
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTOSWIPE END -->
+
+
+
+
+
+
+    </div>
+    <footer data-role="footer" data-position="fixed">
+         <div class="footerExpositores">
+             <img class="imgExpositores" src="img/150108 expoina cintillo.png">
+         </div>
+    </footer>
+    </div>
+</div> <!--  page -->
+
+
+<!-- MEDIA ARCHIVOS  -->
+<div data-role="page" id="contacto" class="whiteContent">
+    <header class="header" data-role="header" data-position="fixed">
+       <a href="#home"  data-transition="slide" data-direction="reverse" class="backBtn">
+       <i class="fa fa-arrow-left icoBlanco"></i>
+        </a>
+        <a href="#panel-25" class="ui-btn-right menuBtn">
+        <img src="img/menu.png">
+        </a>
+        <div class="titleHeadSec">Contacto</div>
+    </header>
+     <div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-25"> 
+     </div>
+    <div data-role="content" class="seccContent">
+    <div class="infoPill">
+        <div class="">
+            <img src="img/byncontacto.jpg">
+            <p>Agradecemos que nos contacte por vía electrónica enviando un correo a: info@expoina.mx</p>
+            
+        </div> 
+    </div>
+      <div class="infoPill">
+        <div class="">
+            <img src="img/contusacontacto.jpg">
+           <p>Contacto para ventas: comercial1@expoina.mx</p>
+        </div> 
+    </div>
+      <div class="infoPill">
+        <div class="">
+            <img src="img/alvolantecontacto.jpg">
+             <p>Para asuntos relacionados con actividades de prensa, por favor escriba a: cesar.roy@alvolante.info</p> 
+        </div> 
+    </div>
+    <footer data-role="footer" data-position="fixed">
+         <div class="footerExpositores">
+             <img class="imgExpositores" src="img/150108 expoina cintillo.png">
+         </div>
+    </footer>
+    </div>
+</div> <!--  page -->
+
+
+
+</body>
+</html>
