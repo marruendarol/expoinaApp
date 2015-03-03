@@ -108,11 +108,19 @@ function initApp(){
        genMenu("#panel-22")
        startGal();
     })
+    $(document).on("pageshow","#mediaVideos", function() {
+       genMenu("#panel-23")
+    })
    
+     $(document).on("pageshow","#redes", function() {
+       genMenu("#panel-24")
+    })
 
     $(document).on("pageshow","#contacto", function() {
        genMenu("#panel-25")
     })
+
+    
 
 
 
@@ -120,6 +128,9 @@ function initApp(){
 
 
     genMenu("#panel-01")
+    $('#contentMain').click(function(){
+      $( "#panel-01" ).panel( "open" );
+    })
 }
 
 

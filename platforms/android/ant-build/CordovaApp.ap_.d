@@ -191,11 +191,14 @@ Z:\web\expoinaApp\platforms\android\assets\www\img\expoina.png \
 Z:\web\expoinaApp\platforms\android\assets\www\img\expoina2014_395.jpg \
 Z:\web\expoinaApp\platforms\android\assets\www\img\expoina2014_510.jpg \
 Z:\web\expoinaApp\platforms\android\assets\www\img\expoina2014_770.jpg \
+Z:\web\expoinaApp\platforms\android\assets\www\img\fb-u133-fr.png \
 Z:\web\expoinaApp\platforms\android\assets\www\img\grecabaja.png \
 Z:\web\expoinaApp\platforms\android\assets\www\img\logo_ina_n.jpg \
 Z:\web\expoinaApp\platforms\android\assets\www\img\menu.png \
 Z:\web\expoinaApp\platforms\android\assets\www\img\pdf-u6565-fr.png \
 Z:\web\expoinaApp\platforms\android\assets\www\img\plano.png \
+Z:\web\expoinaApp\platforms\android\assets\www\img\tw-u134-fr.png \
+Z:\web\expoinaApp\platforms\android\assets\www\img\youtube-u135-fr.png \
 Z:\web\expoinaApp\platforms\android\assets\www\js\components \
 Z:\web\expoinaApp\platforms\android\assets\www\js\ender.js \
 Z:\web\expoinaApp\platforms\android\assets\www\js\handlebars-v1.3.0.js \
